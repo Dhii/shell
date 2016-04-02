@@ -1,0 +1,45 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "6b8298a7990b85803b539cc94001a0a6",
+    "content-hash": "2de4263f53bf753b53de30136f3eafa8",
+    "packages": [
+        {
+            "name": "dhii/shell-interop",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dhii/shell-interop",
+                "reference": "bdd5dfedc4d4964b338bf10d59f4f9f14c3bbd6e"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dhii\\ShellInterop\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dhii Team",
+                    "email": "development@dhii.co"
+                }
+            ],
+            "description": "A standard for shell wrapper interoperability",
+            "time": "2016-04-02 22:54:59"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

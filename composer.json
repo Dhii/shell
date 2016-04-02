@@ -1,0 +1,22 @@
+{
+    "name": "dhii/shell",
+    "description": "A standards-compliant shell wrapper implementation.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dhii Team",
+            "email": "development@dhii.co"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "dhii/shell-interop": "^0.1"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/dhii/shell-interop"
+        }
+    ]
+}
