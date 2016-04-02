@@ -13,6 +13,9 @@
     "require": {
         "dhii/shell-interop": "^0.1"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^5.3"
+    },
     "repositories": [
         {
             "type": "git",
