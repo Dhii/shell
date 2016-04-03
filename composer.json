@@ -11,7 +11,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "dhii/shell-interop": "^0.1"
+        "dhii/shell-interop": "^0.1",
+        "dhii/shell-command-interop": "^0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.3"
@@ -20,6 +21,10 @@
         {
             "type": "git",
             "url": "https://github.com/dhii/shell-interop"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/dhii/shell-command-interop"
         }
     ],
     "autoload": {
