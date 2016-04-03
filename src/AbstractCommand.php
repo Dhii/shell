@@ -10,7 +10,7 @@ use Dhii\ShellCommandInterop;
  *
  * @author Dhii Team <development@dhii.co>
  */
-abstract class CommandAbstract implements
+abstract class AbstractCommand implements
     ShellInterop\CommandInterface,
     ShellCommandInterop\ConfigurableCommandInterface
 {

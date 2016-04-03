@@ -9,7 +9,7 @@ use Dhii\Shell;
  *
  * @author Dhii Team <development@dhii.co>
  */
-class CommandAbstractTest extends \PHPUnit_Framework_TestCase
+class AbstractCommandTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @since [*next-version*]
@@ -18,7 +18,7 @@ class CommandAbstractTest extends \PHPUnit_Framework_TestCase
      */
     public function createInstance()
     {
-        $commandMock = $this->getMockForAbstractClass('\Dhii\Shell\CommandAbstract');
+        $commandMock = $this->getMockForAbstractClass('\Dhii\Shell\AbstractCommand');
 
         return $commandMock;
     }
