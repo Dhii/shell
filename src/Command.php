@@ -41,6 +41,7 @@ class Command extends AbstractCommand implements ShellCommandInterop\MutableComm
     protected function _setMainCommand($mainCommand)
     {
         $this->mainCommand = $mainCommand;
+
         return $this;
     }
 

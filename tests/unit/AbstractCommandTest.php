@@ -8,6 +8,7 @@ use Dhii\Shell;
  * Description of CommandAbstractTest.
  *
  * @since [*next-version*]
+ *
  * @author Dhii Team <development@dhii.co>
  */
 class AbstractCommandTest extends \PHPUnit_Framework_TestCase

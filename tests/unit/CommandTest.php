@@ -3,21 +3,25 @@
 namespace Dhii\Shell\Test;
 
 /**
- * Description of CommandTest
+ * Description of CommandTest.
  *
  * @since [*next-version*]
+ *
  * @author Dhii Team <development@dhii.co>
  */
 class CommandTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @since [*next-version*]
+     *
      * @param string $mainCommand The main command text.
+     *
      * @return \Dhii\Shell\Command
      */
     public function createInstance($mainCommand = 'ls')
     {
         $command = new \Dhii\Shell\Command($mainCommand);
+
         return $command;
     }
 
@@ -56,7 +60,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
     {
         $mainCommand = 'git';
         $command = $this->createInstance($mainCommand);
-        $this->assertEquals($mainCommand, (string)$command, 'Main command must be output correctly alone');
+        $this->assertEquals($mainCommand, (string) $command, 'Main command must be output correctly alone');
     }
 
     /**
@@ -83,7 +87,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
         $mainCommand = 'composer';
         $subCommands = ['init', 'another'];
         $command = $this->createInstance($mainCommand);
-        foreach($subCommands as $_subCommand) {
+        foreach ($subCommands as $_subCommand) {
             $command->addSubCommand($_subCommand);
         }
         $this->assertSame($subCommands, $command->getSubCommands(), 'Must be able to have a list of all subcommands retrieved');
@@ -114,7 +118,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
         $mainCommand = 'composer';
         $subCommands = ['init', 'another'];
         $command = $this->createInstance($mainCommand);
-        foreach($subCommands as $_subCommand) {
+        foreach ($subCommands as $_subCommand) {
             $command->addSubCommand($_subCommand);
         }
         $this->assertEquals(sprintf('%1$s %2$s', $mainCommand, implode(' ', $subCommands)), (string) $command, 'Must be able to output the command and subcommand string correctly');
@@ -372,7 +376,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
         $command = $this->createInstance($mainCommand);
 
         $subCommands = ['clone'];
-        foreach($subCommands as $_subCommand) {
+        foreach ($subCommands as $_subCommand) {
             $command->addSubCommand($_subCommand);
         }
 
@@ -410,7 +414,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
         $command = $this->createInstance($mainCommand);
 
         $subCommands = ['init', 'another'];
-        foreach($subCommands as $_subCommand) {
+        foreach ($subCommands as $_subCommand) {
             $command->addSubCommand($_subCommand);
         }
 
