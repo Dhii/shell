@@ -8,7 +8,7 @@ namespace Dhii\Shell\Command;
  * @since [*next-version*]
  * @author Dhii Team <development@dhii.co>
  */
-abstract class NamedValueAbstract implements NamedValueInterface
+abstract class AbstractNamedValue implements NamedValueInterface
 {
     const PREFIX = '';
 

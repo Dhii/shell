@@ -10,7 +10,7 @@ use Dhii\Shell\Command;
  * @since [*next-version*]
  * @author Dhii Team <development@dhii.co>
  */
-class NamedValueAbstractTest extends \PHPUnit_Framework_TestCase
+class AbstractNamedValueTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @since [*next-version*]
@@ -20,7 +20,7 @@ class NamedValueAbstractTest extends \PHPUnit_Framework_TestCase
      */
     public function createInstance($name, $value = null)
     {
-        $valueMock = $this->getMockForAbstractClass('\\Dhii\\Shell\\Command\\NamedValueAbstract', [$name, $value]);
+        $valueMock = $this->getMockForAbstractClass('\\Dhii\\Shell\\Command\\AbstractNamedValue', [$name, $value]);
         return $valueMock;
     }
 
