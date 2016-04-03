@@ -165,18 +165,40 @@ class AbstractCommandTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(sprintf('%1$s %2$s', $value[0], $value[1]), $command->joinValues($value), 'Joined values must be a string concatenated with a space');
     }
 
+    /**
+     * Tests if a single empty value joined will remain empty.
+     *
+     * @since [*next-version*]
+     */
     public function testCanJoinValuesEmptySingle()
     {
         $command = $this->createInstance();
         $value = '';
-        $this->assertEquals($value, $command->joinValues($value, ' '), 'Joined value must be empty');
+        $this->assertEquals($value, $command->joinValues($value, ' '), 'Joined value must be empty if empty');
     }
 
-    public function testCanJoinValuesEmptyMultiple()
+    /**
+     * Tests if an empty array value joined will remain empty.
+     *
+     * @since [*next-version*]
+     */
+    public function testCanJoinValuesEmptyArray()
     {
         $command = $this->createInstance();
         $value = [];
-        $this->assertEquals('', $command->joinValues($value, ' '), 'Joined value must be empty');
+        $this->assertEquals('', $command->joinValues($value, ' '), 'Joined value must be empty if empty array');
+    }
+
+    /**
+     * Tests if an empty array value joined will remain empty.
+     *
+     * @since [*next-version*]
+     */
+    public function testCanJoinValuesEmptyMultiple()
+    {
+        $command = $this->createInstance();
+        $value = ['', ''];
+        $this->assertEquals('', $command->joinValues($value, ' '), 'Joined value must be empty if array of empty values');
     }
 
     /**
@@ -229,7 +251,7 @@ class AbstractCommandTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Tests if padded value will have been padded with explicit padding.
+     * Tests if padded value will not be padded if it's an empty string.
      *
      * @since [*next-version*]
      */
