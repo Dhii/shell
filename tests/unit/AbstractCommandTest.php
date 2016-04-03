@@ -165,6 +165,20 @@ class AbstractCommandTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(sprintf('%1$s %2$s', $value[0], $value[1]), $command->joinValues($value), 'Joined values must be a string concatenated with a space');
     }
 
+    public function testCanJoinValuesEmptySingle()
+    {
+        $command = $this->createInstance();
+        $value = '';
+        $this->assertEquals($value, $command->joinValues($value, ' '), 'Joined value must be empty');
+    }
+
+    public function testCanJoinValuesEmptyMultiple()
+    {
+        $command = $this->createInstance();
+        $value = [];
+        $this->assertEquals('', $command->joinValues($value, ' '), 'Joined value must be empty');
+    }
+
     /**
      * Tests if padded value will have been padded with explicit padding.
      *
