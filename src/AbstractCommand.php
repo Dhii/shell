@@ -36,7 +36,7 @@ abstract class AbstractCommand implements
 
     public function padValue($value, $padding = ' ')
     {
-        if (!is_null($value)) {
+        if (!is_null($value) && $value !== '') {
             $value = sprintf('%1$s%2$s', $padding, $value);
         }
 

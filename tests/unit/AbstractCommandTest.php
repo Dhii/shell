@@ -227,4 +227,16 @@ class AbstractCommandTest extends \PHPUnit_Framework_TestCase
         $value = null;
         $this->assertEquals(null, $command->padValue($value, ' '), 'Null value must not be padded');
     }
+
+    /**
+     * Tests if padded value will have been padded with explicit padding.
+     *
+     * @since [*next-version*]
+     */
+    public function testCanPadValueEmpty()
+    {
+        $command = $this->createInstance();
+        $value = '';
+        $this->assertEquals('', $command->padValue($value, ' '), 'Padded value must be empty if an empty value is being padded');
+    }
 }
