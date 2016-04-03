@@ -96,4 +96,23 @@ abstract class AbstractCommand implements
 
         return $this;
     }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @since [*next-version*]
+     */
+    public function joinValues($values, $glue = ' ')
+    {
+        if (is_null($values)) {
+            return $values;
+        }
+
+        $values = (array)$values;
+        $values = array_map(function($value){
+            return (string)$value;
+        }, $values);
+
+        return join($glue, $values);
+    }
 }

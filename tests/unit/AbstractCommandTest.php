@@ -14,7 +14,7 @@ class AbstractCommandTest extends \PHPUnit_Framework_TestCase
     /**
      * @since [*next-version*]
      *
-     * @return Shell\CommandAbstract
+     * @return Shell\AbstractCommand
      */
     public function createInstance()
     {
@@ -126,5 +126,41 @@ class AbstractCommandTest extends \PHPUnit_Framework_TestCase
         ];
         $command->setOptions($value);
         $this->assertEquals($value, $command->getOptions(), 'Options must be settable and retrievable');
+    }
+
+    /**
+     * Tests if a single value is joined correctly.
+     *
+     * @since [*next-version*]
+     */
+    public function testCanJoinValuesSingle()
+    {
+        $command = $this->createInstance();
+        $value = 123;
+        $this->assertSame((string)$value, $command->joinValues($value, ' '), 'Joined value must be same as input, but of string type');
+    }
+
+    /**
+     * Tests if multiple values are joined correctly.
+     *
+     * @since [*next-version*]
+     */
+    public function testCanJoinValuesMultiple()
+    {
+        $command = $this->createInstance();
+        $value = [234, 345];
+        $this->assertSame(sprintf('%1$s %2$s', $value[0], $value[1]), $command->joinValues($value, ' '), 'Joined values must be a string concatenated with a space');
+    }
+
+    /**
+     * Tests if multiple values are joined correctly using the default separator.
+     *
+     * @since [*next-version*]
+     */
+    public function testCanJoinValuesDefaultGlue()
+    {
+        $command = $this->createInstance();
+        $value = [321, 436];
+        $this->assertSame(sprintf('%1$s %2$s', $value[0], $value[1]), $command->joinValues($value), 'Joined values must be a string concatenated with a space');
     }
 }
