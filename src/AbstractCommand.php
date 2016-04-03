@@ -33,4 +33,13 @@ abstract class AbstractCommand implements
 
         return implode($glue, $values);
     }
+
+    public function padValue($value, $padding = ' ')
+    {
+        if (!is_null($value)) {
+            $value = sprintf('%1$s%2$s', $padding, $value);
+        }
+
+        return $value;
+    }
 }

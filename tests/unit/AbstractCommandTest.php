@@ -164,4 +164,53 @@ class AbstractCommandTest extends \PHPUnit_Framework_TestCase
         $value = [321, 436];
         $this->assertSame(sprintf('%1$s %2$s', $value[0], $value[1]), $command->joinValues($value), 'Joined values must be a string concatenated with a space');
     }
+
+    /**
+     * Tests if padded value will have been padded with explicit padding.
+     *
+     * @since [*next-version*]
+     */
+    public function testCanPadValue()
+    {
+        $command = $this->createInstance();
+        $value = 'asd';
+        $this->assertEquals(" $value", $command->padValue($value, ' '), 'Padded value must be same, but with a space in the beginning');
+    }
+
+    /**
+     * Tests if padded value will have been padded with implicit padding just the same.
+     *
+     * @since [*next-version*]
+     */
+    public function testCanPadValueDefaultGlue()
+    {
+        $command = $this->createInstance();
+        $value = 'gasdf';
+        $this->assertEquals(" $value", $command->padValue($value), 'Padded value must be same, but with a space in the beginning');
+    }
+
+    /**
+     * Tests if padded value will have been padded with explicit padding even
+     * if it is not a string.
+     *
+     * @since [*next-version*]
+     */
+    public function testCanPadValueNonString()
+    {
+        $command = $this->createInstance();
+        $value = 12351;
+        $this->assertEquals(" $value", $command->padValue($value, ' '), 'Padded value must be same, but converted to string, and with a space in the beginning');
+    }
+
+    /**
+     * Tests if padded value will not have been padded when null.
+     *
+     * @since [*next-version*]
+     */
+    public function testCanPadValueNull()
+    {
+        $command = $this->createInstance();
+        $value = null;
+        $this->assertEquals(null, $command->padValue($value, ' '), 'Null value must not be padded');
+    }
 }
