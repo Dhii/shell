@@ -5,22 +5,26 @@ namespace Dhii\Shell\Command\Test;
 use Dhii\Shell\Command;
 
 /**
- * Description of NamedValueAbstract
+ * Description of NamedValueAbstract.
  *
  * @since [*next-version*]
+ *
  * @author Dhii Team <development@dhii.co>
  */
 class AbstractNamedValueTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @since [*next-version*]
-     * @param string $name
+     *
+     * @param string       $name
      * @param string|array $value
+     *
      * @return Command\NamedValueAbstract
      */
     public function createInstance($name, $value = null)
     {
         $valueMock = $this->getMockForAbstractClass('\\Dhii\\Shell\\Command\\AbstractNamedValue', [$name, $value]);
+
         return $valueMock;
     }
 
@@ -90,7 +94,7 @@ class AbstractNamedValueTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Tests if the correct values string is produced given a single value
+     * Tests if the correct values string is produced given a single value.
      *
      * @since [*next-version*]
      */
@@ -103,7 +107,7 @@ class AbstractNamedValueTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Tests if the correct values string is produced given multiple values
+     * Tests if the correct values string is produced given multiple values.
      *
      * @since [*next-version*]
      */
