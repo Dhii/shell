@@ -7,6 +7,7 @@ use Dhii\Shell;
 /**
  * Description of CommandAbstractTest.
  *
+ * @since [*next-version*]
  * @author Dhii Team <development@dhii.co>
  */
 class AbstractCommandTest extends \PHPUnit_Framework_TestCase
@@ -137,7 +138,7 @@ class AbstractCommandTest extends \PHPUnit_Framework_TestCase
     {
         $command = $this->createInstance();
         $value = 123;
-        $this->assertSame((string)$value, $command->joinValues($value, ' '), 'Joined value must be same as input, but of string type');
+        $this->assertSame((string) $value, $command->joinValues($value, ' '), 'Joined value must be same as input, but of string type');
     }
 
     /**
