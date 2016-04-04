@@ -29,4 +29,4 @@ The only wrapper you'll ever need
 * *Structure*: Build commands and acquire results in a structured way with separate instances of dedicated classes.
 * *Switch*: Don't like this implementation? Use another standards-compliant one, or create your own!
 
-**Note**: *Italics above indicate a planned feature. Implemented features are in **bold***.
+**Note**: *Italics above indicate a planned feature. Implemented features are in* **bold**.
