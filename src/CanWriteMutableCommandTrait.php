@@ -13,10 +13,11 @@ use Dhii\Shell\Command\NamedValueInterface;
  */
 trait CanWriteMutableCommandTrait
 {
-    protected $subCommands = [];
-    protected $parameters = [];
-    protected $arguments = [];
-    protected $flags = [];
+    // PHP < 7.0 doesn't like this in strict mode
+//    protected $subCommands = [];
+//    protected $parameters = [];
+//    protected $arguments = [];
+//    protected $flags = [];
 
     /**
      * Adds a sub command.

@@ -11,10 +11,11 @@ namespace Dhii\Shell;
  */
 trait CanReadMutableCommandTrait
 {
-    protected $subCommands = [];
-    protected $parameters = [];
-    protected $arguments = [];
-    protected $flags = [];
+    // PHP < 7.0 doesn't like this in strict mode
+//    protected $subCommands = [];
+//    protected $parameters = [];
+//    protected $arguments = [];
+//    protected $flags = [];
 
     /**
      * Gets the sub commands.

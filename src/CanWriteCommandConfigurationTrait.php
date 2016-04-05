@@ -9,9 +9,10 @@ namespace Dhii\Shell;
  */
 trait CanWriteCommandConfigurationTrait
 {
-    protected $workingDirectory;
-    protected $environment;
-    protected $options = [];
+    // PHP < 7.0 doesn't like this in strict mode
+//    protected $workingDirectory;
+//    protected $environment;
+//    protected $options = [];
 
     /**
      * @since [*next-version*]
