@@ -1,4 +1,6 @@
 # Shell
+![build status](https://travis-ci.org/Dhii/shell.svg)
+
 An Object Oriented shell wrapper implementation compliant with
 [shell-interop](https://github.com/dhii/shell-interop) and [shell-command-interop](https://github.com/Dhii/shell-command-interop).
 
