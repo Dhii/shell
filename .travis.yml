@@ -8,7 +8,7 @@ php:
   - nightly
   
 before_script:
-  - composer install -n
+  - composer install -n --ignore-platform-reqs php
   - composer update phpunit/phpunit
 
 script:
