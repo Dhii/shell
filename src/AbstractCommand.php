@@ -16,7 +16,7 @@ abstract class AbstractCommand implements
 {
     use CanReadCommandConfigurationTrait;
     use CanWriteCommandConfigurationTrait;
-    
+
     protected $workingDirectory;
     protected $environment;
     protected $options = [];
