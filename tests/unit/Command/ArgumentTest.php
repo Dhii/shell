@@ -5,8 +5,7 @@ namespace Dhii\Shell\Test\Command;
 use Dhii\Shell\Command;
 
 /**
- * Description of ArgumentTest.
- *
+ * Tests Argument.
  *
  * @author Dhii Team <development@dhii.co>
  */

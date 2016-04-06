@@ -3,7 +3,9 @@
 namespace Dhii\Shell\Command;
 
 /**
- * Description of Argument.
+ * A command line argument.
+ * 
+ * @since [*next-version*]
  *
  * @author Dhii Team <development@dhii.co>
  */
