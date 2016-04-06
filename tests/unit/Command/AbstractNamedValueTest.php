@@ -1,6 +1,6 @@
 <?php
 
-namespace Dhii\Shell\Command\Test;
+namespace Dhii\Shell\Test\Command;
 
 use Dhii\Shell\Command;
 
