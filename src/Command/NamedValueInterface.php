@@ -11,22 +11,8 @@ namespace Dhii\Shell\Command;
  *
  * @author Dhii Team <development@dhii.co>
  */
-interface NamedValueInterface
+interface NamedValueInterface extends ValueInterface
 {
-    /**
-     * @since [*next-version*]
-     *
-     * @return The string representation of the named value.
-     */
-    public function __toString();
-
-    /**
-     * @since [*next-version*]
-     *
-     * @return string The string representation of only the value.
-     */
-    public function getValue();
-
     /**
      * @since [*next-version*]
      *

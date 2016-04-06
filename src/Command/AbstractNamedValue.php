@@ -9,7 +9,7 @@ namespace Dhii\Shell\Command;
  *
  * @author Dhii Team <development@dhii.co>
  */
-abstract class AbstractNamedValue implements NamedValueInterface
+abstract class AbstractNamedValue extends AbstractValue implements NamedValueInterface
 {
     const PREFIX = '';
 
@@ -25,7 +25,7 @@ abstract class AbstractNamedValue implements NamedValueInterface
     public function __construct($name, $value = null)
     {
         $this->_setName($name);
-        $this->_setValue($value);
+        parent::__construct($value);
     }
 
     /**
@@ -92,32 +92,6 @@ abstract class AbstractNamedValue implements NamedValueInterface
     }
 
     /**
-     * @since [*next-version*]
-     *
-     * @param string|int|array|null $value The value, or arrray of values to set.
-     */
-    protected function _setValue($value)
-    {
-        if (!is_null($value)) {
-            $value = (array) $value;
-        }
-
-        $this->value = $value;
-    }
-
-    /**
-     * Get all the values, raw.
-     *
-     * @since [*next-version*]
-     *
-     * @return string|int|array|null The raw value/values.
-     */
-    public function getValue()
-    {
-        return $this->value;
-    }
-
-    /**
      * Get all the values as string.
      *
      * Will contain the prefixed name before each value.
@@ -131,23 +105,5 @@ abstract class AbstractNamedValue implements NamedValueInterface
         $name = sprintf('%1$s ', $this->getPrefixedName());
 
         return sprintf('%1$s%2$s', $name, implode(" $name", $this->escapeShellArg($this->getValue())));
-    }
-
-    /**
-     * Escapes one or many shell arguments.
-     *
-     * @since [*next-version*]
-     *
-     * @param string|int|array $argument A shell argument or array of such arguments.
-     *
-     * @return type
-     */
-    public function escapeShellArg($argument)
-    {
-        if (is_array($argument)) {
-            return array_map('escapeshellarg', $argument);
-        }
-
-        return escapeshellarg($argument);
     }
 }
