@@ -802,7 +802,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertEquals(
-            sprintf('%1$s update -n %3$s --no-dev %4$s  %2$s', $mainCommand, escapeshellarg('monolog/monolog'), escapeshellarg('trololo'), escapeshellarg('lalala')),
+            sprintf('%1$s update -n %3$s --no-dev %4$s %2$s', $mainCommand, escapeshellarg('monolog/monolog'), escapeshellarg('trololo'), escapeshellarg('lalala')),
             (string) $command,
             'Must be able to output the command string correctly, including the sub command, flags, arguments, and parameters'
         );
